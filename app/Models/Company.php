@@ -40,12 +40,12 @@ class Company extends Model
 
     public function updateCompany(array $data)
     {
-        $this->name = (isset($data['name'])) ? $data['name'] : null;
-        $this->identification_number = (isset($data['identification_number'])) ? $data['identification_number'] : null;
-        $this->address = (isset($data['address'])) ? $data['address'] : null;
-        $this->city = (isset($data['city'])) ? $data['city'] : null;
-        $this->state = (isset($data['state'])) ? $data['state'] : null;
-        $this->latitude = (isset($data['latitude'])) ? $data['latitude'] : null;
-        $this->longitude = (isset($data['longitude'])) ? $data['longitude'] : null;
+        (isset($data['name'])) ? $this->name = $data['name'] : null;
+        (isset($data['identification_number'])) ? $this->identification_number = $data['identification_number'] : null;
+        (isset($data['address'])) ? $this->address = $data['address'] : null;
+        (isset($data['city'])) ? $this->city =  $data['city'] : null;
+        (isset($data['state'])) ? $this->state =  $data['state'] : null;
+        (isset($data['latitude'])) ? $this->latitude = $data['latitude'] : null;
+        (isset($data['longitude'])) ? $this->longitude = $data['longitude'] : null;
     }
 }
